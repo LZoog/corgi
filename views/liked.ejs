@@ -8,9 +8,11 @@
     <h1><%= title %></h1>
     <% corgi.forEach(function(corgi) { %>
       <% if (corgi.liked === true) { %>
+       <img src="<%=corgi.image%>">
         <p>Name: <%= corgi.name %><br>
         <p>Age: <%= corgi.age %></p>
         <p>Interests: <%= corgi.interests %></p>
+
         <% } %>
       <% }); %>
   </body>

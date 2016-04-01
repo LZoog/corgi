@@ -6,7 +6,7 @@ var Corgi = require('../models/corgi');
 router.get('/', function(req, res, next) {
   Corgi.find(function(err, corgi) {
      if (err) console.log(err);
-     res.render('index', { title: 'Cool Corgis', corgi: corgi });
+     res.render('index', { title: 'Cool Corgis', corgi: corgi[Math.floor(Math.random() * 3)] });
   });
 });
 
