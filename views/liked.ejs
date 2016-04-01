@@ -1,13 +1,25 @@
 <% include partials/header %>
  <p><a href="../">Back</a></p>
- <h1><%= title %></h1>
+ <h1 class="logo"><%= title %></h1>
+
+<ul class="list-group">
  <% corgi.forEach(function(corgi) { %>
    <% if (corgi.liked === true) { %>
-    <img src="<%=corgi.image%>">
-     <p>Name: <%= corgi.name %><br>
-     <p>Age: <%= corgi.age %></p>
-     <p>Interests: <%= corgi.interests %></p>
-
+      <li class="list-group-item">
+       <div class="container">
+        <div class="row">
+         <div class="col-sm-4">
+      <img src="<%=corgi.image%>" class="img-responsive img-center">
+     </div>
+       <div class="col-sm-8 pull-">
+       <h1 class="corgi"><%= corgi.name %>, <%= corgi.age %></h1>
+       <h4>Interests</h4>
+       <p><%= corgi.interests %></p>
+      </div>
+     </div>
+     </div>
      <% } %>
+    </li>
    <% }); %>
+  </ul>
  <% include partials/footer %>
