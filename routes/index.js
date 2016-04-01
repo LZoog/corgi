@@ -17,7 +17,7 @@ router.get('/liked', function(req, res, next) {
   });
 });
 
-router.post('/', function(req, res, next) {
+router.put('/', function(req, res) {
   var id = req.body.id;
   var makeTrue = req.body.makeTrue;
   var makeFalse = req.body.makeTrue;
