@@ -11,5 +11,18 @@
         <p>Age: <%= corgi.age %></p>
         <p>Interests: <%= corgi.interests %></p>
         <p>Liked: <%= corgi.liked %></p>
+
+        <form method="post" action="/">
+          <input type="hidden" name="makeTrue">
+          <input type="hidden" name="id" value="<%=corgi._id%>">
+          <input type="submit" value="YAAAS 😘">
+        </form>
+
+        <form method="post" action="/">
+          <input type="hidden" name="makeFalse">
+          <input type="hidden" name="id" value="<%=corgi._id%>">
+          <input type="submit" name="false" value="MAYBE LATER 😳">
+        </form>
+
   </body>
 </html>
