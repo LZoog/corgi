@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var corgiSchema = new mongose.schema({
+var corgiSchema = new mongoose.Schema({
  name: {type: String, required: true},
  age: {type: Number, required: true},
  interests: {type: String},
@@ -8,4 +8,4 @@ var corgiSchema = new mongose.schema({
 });
 
 var Corgi = mongoose.model('Corgi', corgiSchema);
-module.exports = Pirate;
+module.exports = Corgi;
