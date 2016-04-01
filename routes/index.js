@@ -17,12 +17,35 @@ router.get('/liked', function(req, res, next) {
   });
 });
 
+router.get('/new', function(req, res, next){
+  res.render('new');
+})
+
 router.post('/', function(req, res, next) {
+  //for liking or unliking
   var id = req.body.id;
   var makeTrue = req.body.makeTrue;
   var makeFalse = req.body.makeTrue;
 
-  if (makeTrue != null) {
+  //for creating new
+  var makeNew = req.body.makeNew;
+  var name = req.body.name;
+  var age = req.body.age;
+  var interests = req.body.interests;
+  var image = req.body.image;
+
+  if (makeNew != null) {
+    var newCorgi = Corgi({
+      name: name,
+      age: age,
+      interests: interests,
+      image: image
+      });
+      newCorgi.save(function(err, user) {
+        if (err) console.log(err);
+        res.redirect('/');
+    });
+    } else if (makeTrue != null) {
     Corgi.findByIdAndUpdate(id, { liked: true }, function(err, user) {
       if (err) console.log(err);
       res.redirect('/');

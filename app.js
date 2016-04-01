@@ -27,6 +27,7 @@ var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_CORGI);
 
 app.use('/', routes);
+app.use('/new', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
