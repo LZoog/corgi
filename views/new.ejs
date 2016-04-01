@@ -1,16 +1,20 @@
-<% include ../partials/header %>
 
-<form name="new_user_form" id="new_user_form" method="post" action="/users">
+<form name="new_user_form" id="new_user_form" method="post" action="/">
+    <div>
+        <input type="hidden" name="makeNew">
+    </div>
     <div>
         Name: <input type="text" name="name" id="name">
     </div>
     <div>
-      Email: <input type="text" name="email" id="email">
+      Age: <input type="text" name="age" id="age">
     </div>
     <div>
-        Favorite thing in the world: <input type="text" name="favorite" id="favorite">
+        Interests: <input type="text" name="interests" id="interests">
     </div>
+    <div>
+        Picture: <input type="text" name="image" id="image">
+    </div>
+
     <input type="submit" value="Save">
 </form>
-
-<% include ../partials/footer %>
