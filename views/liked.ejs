@@ -6,6 +6,12 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% corgi.forEach(function(corgi) { %>
+      <% if (corgi.liked === true) { %>
+        <p>Name: <%= corgi.name %><br>
+        <p>Age: <%= corgi.age %></p>
+        <p>Interests: <%= corgi.interests %></p>
+        <% } %>
+      <% }); %>
   </body>
 </html>
