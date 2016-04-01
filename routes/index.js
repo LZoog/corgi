@@ -27,7 +27,7 @@ router.put('/', function(req, res) {
       if (err) console.log(err);
       res.redirect('/');
     });
-  } else if (makeFalse != null) {
+  } else {
     Corgi.findByIdAndUpdate(id, { liked: false }, function(err, user) {
       if (err) console.log(err)
       res.redirect('/');

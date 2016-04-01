@@ -1,28 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
+<% include partials/header %>
+<h1 class="display-1"><%= title %></h1>
+<div class="card">
+ <div class="card-block">
+  <div id="corg-prof">
       <img src="<%= corgi.image %>">
         <p>Name: <%= corgi.name %><br>
         <p>Age: <%= corgi.age %></p>
         <p>Interests: <%= corgi.interests %></p>
         <p>Liked: <%= corgi.liked %></p>
 
-        <form method="put" action="/">
-          <input type="hidden" name="makeTrue">
-          <input type="hidden" name="id" value="<%=corgi._id%>">
-          <input type="submit" value="YAAAS 😘">
-        </form>
-
-        <form method="put" action="/">
-          <input type="hidden" name="makeFalse">
-          <input type="hidden" name="id" value="<%=corgi._id%>">
-          <input type="submit" name="false" value="MAYBE LATER 😳">
-        </form>
-
-  </body>
-</html>
+   <form method="post" action="/">
+     <input type="hidden" name="makeTrue">
+     <input type="hidden" name="id" value="<%=corgi._id%>">
+     <input type="submit" value="YAAAS 😘" class="btn btn-md btn-info">
+   </form>
+   <form method="post" action="/">
+     <input type="hidden" name="makeFalse">
+     <input type="hidden" name="id" value="<%=corgi._id%>">
+     <input type="submit" name="false" value="MAYBE LATER 😳">
+   </form>
+   <p><a href="/liked">All your Liked Doggies</a></p>
+  </div>
+</div>
+</div>
+<% include partials/footer %>
