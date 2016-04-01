@@ -4,9 +4,14 @@ body {
 
 }
 a {
-  color: #00B7FF;
+  color: red;
 }
-
+a:hover {
+ text-decoration: none;
+}
+.btn {
+ margin: 1%;
+}
 .panel {
  width: 80%;
  margin: 0 auto;

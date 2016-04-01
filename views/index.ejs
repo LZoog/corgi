@@ -6,15 +6,16 @@
 <center>
 <p><a href="/liked" class="btn btn-liked btn-default">All liked</a></p>
 <p><a href="/new" class="btn btn-liked btn-default">New Corgi</a></p>
-
 </center>
 <div class="panel panel-default">
  <div class="panel-heading">
-  <h1 class="corgi"><%= corgi.name %>,<%= corgi.age %><h1>
+  <h1 class="corgi"><%= corgi.name %><h1>
  </div>
  <div class="panel-body">
   <div id="corg-prof">
    <img src="<%= corgi.image %>" class="img-responsive img-center">
+   <h4>age: <%= corgi.age %></h4>
+
    <h4>interests</h4>
    <p><%= corgi.interests %></p>
    <% if(corgi.liked === true) { %>
@@ -24,18 +25,19 @@
    <div class="actions">
     <div class="row">
      <div class="col-sm-6">
+      <form method="post" action="/">
+        <input type="hidden" name="makeFalse">
+        <input type="hidden" name="id" value="<%=corgi._id%>">
+        <button type="submit" name="false" value="MAYBE LATER 😳" class="fa icon fa-ban pull-right fa-3x"></button>
+      </form>
+       </div>
+       <div class="col-sm-6">
         <form method="post" action="/">
           <input type="hidden" name="makeTrue">
           <input type="hidden" name="id" value="<%=corgi._id%>">
           <button type="submit" class="fa icon fa-heart fa-3x"></button>
         </form>
-       </div>
-       <div class="col-sm-6">
-        <form method="post" action="/">
-          <input type="hidden" name="makeFalse">
-          <input type="hidden" name="id" value="<%=corgi._id%>">
-          <button type="submit" name="false" value="MAYBE LATER 😳" class="fa icon fa-ban pull-right fa-3x"></button>
-        </form>
+
        </div>
        </div>
       </div>

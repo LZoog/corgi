@@ -1,20 +1,28 @@
-
+<% include partials/header %>
+<div class="panel panel-default">
+ <div class="panel-heading">
+  <h1 class="corgi">New Corgi</h1>
+ </div>
+ <div class="panel-body">
 <form name="new_user_form" id="new_user_form" method="post" action="/">
     <div>
         <input type="hidden" name="makeNew">
     </div>
     <div>
-        Name: <input type="text" name="name" id="name">
+        Name: <input type="text" name="name" id="name" class="form-control">
     </div>
     <div>
-      Age: <input type="text" name="age" id="age">
+      Age: <input type="text" name="age" id="age" class="form-control">
     </div>
     <div>
-        Interests: <input type="text" name="interests" id="interests">
+        Interests: <input type="text" name="interests" id="interests" class="form-control">
     </div>
     <div>
-        Picture: <input type="text" name="image" id="image">
+        Picture: <input type="text" name="image" id="image" class="form-control">
     </div>
 
-    <input type="submit" value="Save">
+    <input type="submit" class="btn btn-block btn-success">
 </form>
+</div>
+</div>
+<% include partials/footer %>
