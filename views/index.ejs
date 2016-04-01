@@ -1,10 +1,13 @@
+
 <% include partials/header %>
- <h1><%= title %></h1>
- <img src="<%= corgi.image %>">
-   <p>Name: <%= corgi.name %><br>
-   <p>Age: <%= corgi.age %></p>
-   <p>Interests: <%= corgi.interests %></p>
-   <p>Liked: <%= corgi.liked %></p>
+
+
+    <h1><%= title %></h1>
+      <img src="<%= corgi.image %>">
+        <p>Name: <%= corgi.name %><br>
+        <p>Age: <%= corgi.age %></p>
+        <p>Interests: <%= corgi.interests %></p>
+        <p>Liked: <%= corgi.liked %></p>
 
    <form method="post" action="/">
      <input type="hidden" name="makeTrue">
@@ -17,4 +20,6 @@
      <input type="hidden" name="id" value="<%=corgi._id%>">
      <input type="submit" name="false" value="MAYBE LATER 😳">
    </form>
+   <p><a href="/liked">All your Liked Doggies</a></p>
+
   <% include partials/footer %>
